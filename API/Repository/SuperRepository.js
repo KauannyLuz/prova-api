@@ -9,6 +9,7 @@ export async function listarHeroi() {
                 bt_voa              podeVoar
           FROM  tb_super_heroi
     `
+    console.log
 
 
     const [linhas] = await con.query(comando);
