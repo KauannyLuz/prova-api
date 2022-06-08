@@ -1,0 +1,24 @@
+
+
+GET         /superHeroi
+
+Response:
+[
+    {
+        "id": 0,
+        "nome": "",
+        "poderes":"",
+        "voa": true
+    }
+]
+
+/////////////////////////////
+
+POST            /superHeroi
+
+Request Body:
+{
+    "pNome": "",
+    "pPoderes": "",
+    "pVoa": true
+}

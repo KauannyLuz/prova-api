@@ -1,11 +1,24 @@
+
 import mysql from 'mysql2/promise'
 
-const con = mysql.createConnection({
-    host : process.env.mysql_host,
-    user : process.env.mysql_user,
-    passaward : process.env.mysql_pwd,
-    database : process.env.mysql_DB,
+
+const con = await mysql.createConnection({
+    host : process.env.MYSQL_HOST,
+    user : process.env.MYSQL_USER,
+    passaward : process.env.MYSQL_PWD,
+    database : process.env.MYSQL_DB,
+    typeCast: (field, next) => {
+        if (field.type == 'TINY' && field.length == 1) {
+            let valor = field.string();
+            return valor === '1';
+        }
+        else {
+            return next();
+        }
+    }
+})
+
+console.log('Conectou com BD');
 
 
-
-});
+export { con }

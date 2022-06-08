@@ -1,8 +1,10 @@
-create database heroi;
+create database superHeroiDB;
+use superHeroiDB;
 
-create table TB_SUPER_HEROI(
-ID_SUPER_HEROI     INT,
-NM_SUPER_HEROI     VARCHAR(100),
-DS_SUPER_PODER     VARCHAR(200),
-BT_VOA             BOOLEAN
- );
+create table tb_super_heroi (
+	id_super_heroi  	int primary key auto_increment,
+    nm_super_heroi 		varchar(100),
+    ds_super_poderes 	varchar(200),
+    bt_voa 				boolean
+    
+    );
