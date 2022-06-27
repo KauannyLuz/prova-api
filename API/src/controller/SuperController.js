@@ -1,7 +1,7 @@
 
 
 import { Router } from "express";
-import { inserirHeroi, listarHeroi } from "../Repository/SuperRepository";
+import { inserirHeroi, listarHerois } from "../Repository/SuperRepository.js";
 const endpoints = Router();
 
 

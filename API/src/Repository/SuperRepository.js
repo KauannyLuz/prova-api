@@ -1,7 +1,7 @@
-import { con } from "connnection.js";
+import { con } from "../Repository/connection.js";
 
 
-export async function listarHeroi() {
+export async function listarHerois() {
     const comando = `
         SELECT  id_super_heroi      id,
                 nm_super_heroi      nome,
@@ -9,7 +9,7 @@ export async function listarHeroi() {
                 bt_voa              podeVoar
           FROM  tb_super_heroi
     `
-    console.log
+   
 
 
     const [linhas] = await con.query(comando);
